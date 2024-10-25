@@ -11,7 +11,6 @@ class CalculaFrete implements Runnable {
     }
 
     public void verificarFrete() {
-        // Somente calcula o frete se o estoque for suficiente
         if (!verificaEstoque.estoqueSuficiente) {
             System.out.println("Frete não calculado: estoque insuficiente.");
             return;
@@ -41,7 +40,7 @@ class CalculaFrete implements Runnable {
     public void run() {
         System.out.println("Calculando o frete...");
         try {
-            Thread.sleep(2000); // Simulando o tempo de cálculo do frete
+            Thread.sleep(2000);
             verificarFrete();
         } catch (InterruptedException e) {
             e.printStackTrace();
