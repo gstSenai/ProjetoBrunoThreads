@@ -11,6 +11,7 @@ public class Main {
         Thread threadCalculaFrete = new Thread(calculaFrete);
         Thread threadEnviaEmail = new Thread(enviaEmail);
 
+        System.out.println("Processando Produto...\n");
         threadVerificaEstoque.start();
 
         try {
@@ -28,7 +29,6 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.println("Pedido processado com sucesso!");
-
+        System.out.println("\n...Processamento Finalizado");
     }
 }

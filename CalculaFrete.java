@@ -40,7 +40,7 @@ class CalculaFrete implements Runnable {
     public void run() {
         System.out.println("Calculando o frete...");
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             verificarFrete();
         } catch (InterruptedException e) {
             e.printStackTrace();
